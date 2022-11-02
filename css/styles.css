@@ -18,6 +18,8 @@
     --fill-social-footer:#fff;
     --background-social-link-footer-hover:#2196f3;
 
+    --input-border: rgba(33, 33, 33, 0.2);
+
 
 }
 
@@ -110,6 +112,7 @@ header{
     font-weight: 500;
     text-decoration: none;
     line-height: 1.14;
+    fill: #757575;
     letter-spacing: 0.02em;
     transition-property: color;
     transition-duration: 250ms;
@@ -120,6 +123,9 @@ header{
 }
 .adress-header:focus {
     color: var(--color-text-hover);
+}
+.mail.img{
+    fill: #757575;
 }
 .mail-icon{
     margin-right: 10px;
@@ -407,6 +413,7 @@ header{
     fill: var(--color-svg-content);
     box-sizing: border-box;
     border-radius: 4px;
+    cursor: pointer;
     transition-property: border, fill;
     transition-duration: 250ms;
     transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
@@ -637,6 +644,7 @@ header{
 }
     /*Modal*/
 .backdrop{
+
     background-color: rgba(0, 0, 0, 0.1);
     position: fixed;
     top: 0;
@@ -651,6 +659,7 @@ header{
     pointer-events: none;
 }
 .modal{
+    display: block;
     position: absolute;
     top: 50%;
     left: 50%;
@@ -668,8 +677,43 @@ header{
     height: 30px;
     top: 8px;
     right: 8px;
-    background-color: var(--color-white);
-    border: 1px solid var(--color-head);
+    background: none;
+    border: 1px solid rgba(0, 0, 0, 0.1);
     border-radius: 50%;
+    cursor: pointer;
 
+    transition-property: border-color color;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+
+}
+.modal-close-button:hover,
+.modal-close-button:focus{
+    color: var(--color-svg-content-hover);
+    border-color: var(--color-svg-content-hover);
+}
+.form-title{
+    margin-top: 41px;
+    margin-left: 10px;
+    margin-bottom: 10px;
+    margin-right:70px;
+    font-size: 20px;
+    line-height: 1.15;
+    text-align: center;
+    letter-spacing: 0.03em;
+}
+.form-label{
+    display: block;
+}
+.form-container{
+    position: relative;
+}
+.form-input{
+    width: 100%;
+    padding: 12px;
+    border: 1px solid var(--input-border);
+    border-radius: 4px;
+}
+.form-icon{
+    position: absolute;
 }
